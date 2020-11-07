@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "388842267968",
+    "firebase_url": "https://lataxi-7a73b.firebaseio.com",
+    "project_id": "lataxi-7a73b",
+    "storage_bucket": "lataxi-7a73b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388842267968:android:d1f9bcad46fb97e32e06a5",
+        "android_client_info": {
+          "package_name": "com.scooc.scooc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388842267968-jghnnjac5bbqub73ga4ijn5966mtju2p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scooc.scooc",
+            "certificate_hash": "f53fe7ef2ec08c4f560e587f99bf5a73f76ab3a0"
+          }
+        },
+        {
+          "client_id": "388842267968-l0avbegdrhgu157j2ea5sm0d6027rt0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmcWm9K4wiEbXK9TQXM3xOwLBk8ph7doQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388842267968-l0avbegdrhgu157j2ea5sm0d6027rt0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

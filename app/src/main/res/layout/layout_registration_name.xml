@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="30dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegistrationActivity">
+
+        <LinearLayout
+            style="@style/RegistrationParent"
+            android:layout_height="match_parent">
+
+            <LinearLayout style="@style/RegistrationTitleParent">
+
+                <ImageView
+                    style="@style/RegistrationTitleImage"
+                    android:src="@drawable/ic_title_name" />
+
+                <com.scooc.scooc.widgets.CustomTextView
+                    style="@style/RegistrationTitleLabel"
+                    android:text="@string/label_whats_s_your_name" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etxt_registration_name"
+                style="@style/RegistrationInputBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_enter_your_name_here"
+                android:inputType="textPersonName" />
+
+            <LinearLayout
+                style="@style/RegistrationTitleParent"
+                android:layout_height="64dp">
+
+                <ImageView
+                    style="@style/RegistrationTitleImage"
+                    app:srcCompat="@drawable/ic_title_email" />
+
+                <com.scooc.scooc.widgets.CustomTextView
+                    style="@style/RegistrationTitleLabel"
+                    android:text="@string/label_what_s_your_email_address" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etxt_registration_email"
+                style="@style/RegistrationInputBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_mail_outline_black_24dp"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress" />
+
+            <LinearLayout
+                style="@style/RegistrationTitleParent"
+                android:layout_height="63dp">
+
+                <ImageView
+                    style="@style/RegistrationTitleImage"
+                    app:srcCompat="@drawable/ic_title_password" />
+
+                <com.scooc.scooc.widgets.CustomTextView
+                    style="@style/RegistrationTitleLabel"
+                    android:text="@string/label_create_your_account_password" />
+
+            </LinearLayout>
+
+
+            <!--
+        <LinearLayout
+            style="@style/RegistrationTitleParent"
+            android:layout_height="61dp">
+
+            <ImageView
+                style="@style/RegistrationTitleImage"
+                app:srcCompat="@drawable/ic_title_email" />
+
+            <com.scooc.scooc.widgets.CustomTextView
+                style="@style/RegistrationTitleLabel"
+                android:text="Select your gender" />
+
+        </LinearLayout>-->
+            <com.scooc.scooc.widgets.CustomEditText
+                android:id="@+id/etxt_registration_password"
+                style="@style/RegistrationInputBox"
+                android:drawableRight="@drawable/ic_lock_black_24dp"
+                android:hint="@string/hint_enter_your_password"
+                android:inputType="textPassword" />
+
+            <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select the gender"
+            android:textSize="17dp"/>-->
+            <RadioGroup
+                android:id="@+id/radioSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/notDisclose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Disclose" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/hiddengendername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible" />
+
+
+            <TextView
+                android:id="@+id/eTextregistration_dob"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableRight="@drawable/ic_date_range_black_24dp"
+                android:hint="Click DateOfBirth"
+                android:textSize="15dp" />
+                <TextView
+                       android:layout_width="200dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="10dp"
+                       android:id="@+id/textdob"
+                       android:textColor="@color/colorPrimary"
+                       android:text=""
+                       android:textSize="18dp" />
+            <TextView
+                android:id="@+id/addreferal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Referred by (10 digit Mobile number )"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/etextregistration_referral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Enter number "
+                android:maxLength="10"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/remove_ref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remove_ref"
+                android:textSize="16dp"
+                android:visibility="invisible"
+                android:textStyle="italic|bold"
+                android:textColor="@color/colorPrimary"
+
+                />
+
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                style="@style/RegistrationFAB"
+                android:layout_height="137dp"
+                android:onClick="onRegistrationNameSubmitClick"
+                app:backgroundTint="@color/colorPrimary"
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_arrow_registration" />
+
+            <!-- add RadioGroup which contain the many RadioButton-->
+
+
+            <!-- In RadioGroup create the 1 Radio Button-->
+            <!-- like this we will add some more Radio Button-->
+
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>
