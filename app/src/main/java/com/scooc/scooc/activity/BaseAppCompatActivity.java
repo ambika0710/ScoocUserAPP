@@ -760,4 +760,12 @@ public class BaseAppCompatActivity extends BaseActivity {
         intent.putExtra("bean", userBean);
         startActivity(intent);
     }
+
+    public void onAutoBooking_Rides(View view) {
+        view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
+
+        Intent intent = new Intent(BaseAppCompatActivity.this, AutoBooking.class);
+        startActivity(intent);
+
+    }
 }
