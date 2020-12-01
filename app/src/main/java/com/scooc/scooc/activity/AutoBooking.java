@@ -449,7 +449,7 @@ public class AutoBooking extends BaseAppCompatActivity implements
 /*
                                 eTextdob.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
 */
-                                mdob_et.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                                mdob_et.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
                                 //store data in preference
                                 sharedPreferenceHelper.setStartDateDay(dayOfMonth);
                                 sharedPreferenceHelper.setStartDateMonth(monthOfYear);
