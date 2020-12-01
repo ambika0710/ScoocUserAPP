@@ -1,11 +1,10 @@
-package com.scooc.scooc;
+package com.scooc.scooc.activity.sample;
 
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,7 +21,6 @@ import com.scooc.scooc.R;
 import com.scooc.scooc.activity.AutoBooking;
 import com.scooc.scooc.activity.AutoBookingAdapter;
 import com.scooc.scooc.activity.Employee;
-import com.scooc.scooc.activity.sample.DatabaseHelper;
 
 public class ViewAutoBooking extends AppCompatActivity {
 

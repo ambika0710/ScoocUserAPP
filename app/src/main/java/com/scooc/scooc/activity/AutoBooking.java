@@ -1,7 +1,5 @@
 package com.scooc.scooc.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 import com.scooc.scooc.R;
@@ -15,12 +13,10 @@ import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Handler;
 
 import android.text.InputType;
@@ -80,10 +76,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.scooc.scooc.R;
-import com.scooc.scooc.ViewAutoBooking;
+import com.scooc.scooc.activity.sample.ViewAutoBooking;
 import com.scooc.scooc.activity.sample.AlarmReceiver;
-import com.scooc.scooc.activity.sample.DatabaseHelper;
 import com.scooc.scooc.activity.sample.NotificationUtilsKt;
 import com.scooc.scooc.activity.sample.SharedPreferenceHelper;
 import com.scooc.scooc.adapter.CarTypeRecyclerAdapter;

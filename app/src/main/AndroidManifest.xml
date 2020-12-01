@@ -23,7 +23,7 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".activity.AutoBookingAdapter"></activity>
-        <activity android:name=".ViewAutoBooking" />
+        <activity android:name=".activity.sample.ViewAutoBooking" />
         <activity android:name=".activity.AutoBooking" />
         <activity android:name=".activity.OTP_ForgotPassword" />
         <activity android:name=".activity.ForgotPasswordOTPActivity" /> <!-- Remove this to remove Fabric -->
