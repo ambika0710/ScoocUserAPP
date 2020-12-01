@@ -81,6 +81,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.scooc.scooc.R;
+import com.scooc.scooc.ViewAutoBooking;
 import com.scooc.scooc.activity.sample.AlarmReceiver;
 import com.scooc.scooc.activity.sample.DatabaseHelper;
 import com.scooc.scooc.activity.sample.NotificationUtilsKt;
@@ -504,13 +505,17 @@ public class AutoBooking extends BaseAppCompatActivity implements
             }
         });
     }
-    public class NotificationID {
+
+    public class NotificationID
+    {
         private final  AtomicInteger c = new AtomicInteger(0);
         int getID() {
             return c.incrementAndGet();
         }
     }
-    private void addRidebtnClick() {
+
+    private void addRidebtnClick()
+    {
         add_ride.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -534,7 +539,7 @@ public class AutoBooking extends BaseAppCompatActivity implements
         });
     }
 
-    private void addRecurring() {
+    private void addAutoBooking() {
 
    /*     String name = editTextName.getText().toString().trim();
         String salary = editTextSalary.getText().toString().trim();
@@ -566,12 +571,6 @@ public class AutoBooking extends BaseAppCompatActivity implements
         Toast.makeText(this, "Auto Booking Added Successfully", Toast.LENGTH_SHORT).show();
 
     }
-
-
-
-
-
-
 
 
 
@@ -612,7 +611,7 @@ public class AutoBooking extends BaseAppCompatActivity implements
                     public void onClick(View v) {
 
 
-                        Intent intent = new Intent(AutoBooking.this, EmployeeActivity.class);
+                        Intent intent = new Intent(AutoBooking.this, ViewAutoBooking.class);
                         startActivity(intent);
 
                     }
@@ -662,7 +661,7 @@ public class AutoBooking extends BaseAppCompatActivity implements
 
                     //cancelPendingIntent();
                     sample();
-                    addRecurring();
+                    addAutoBooking();
                 }
 
             }
@@ -787,8 +786,8 @@ public class AutoBooking extends BaseAppCompatActivity implements
         dpDialog.show();
     }*/
 
-    public void initViews() {
-
+    public void initViews()
+    {
         snackBarRefreshOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
