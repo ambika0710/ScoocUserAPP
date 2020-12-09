@@ -134,7 +134,7 @@ public class LandingPageActivity extends BaseAppCompatActivity implements
     private Toolbar toolbarHome;
     private TextView txtActionSearch;
     private FrameLayout framePickup;
-    private ImageView ivMarker;
+    private ImageView ivMarker,ivsubscription;
     private ImageView ivBottomMarker;
     private LinearLayout llLandingBottomBar;
     private ImageView ivLocationButton;
@@ -586,7 +586,7 @@ public class LandingPageActivity extends BaseAppCompatActivity implements
         btnRequest = (Button) findViewById(R.id.btn_request);
 
         rlFare = (RelativeLayout) findViewById(R.id.rl_fare);
-
+        ivsubscription = (ImageView)findViewById(R.id.action_subscription);
         coordinatorLayout.removeView(toolbar);
 //      toolbar.setVisibility(View.GONE);
         toolbarHome = (Toolbar) getLayoutInflater().inflate(R.layout.toolbar_landing_page, toolbar);
@@ -668,6 +668,7 @@ public class LandingPageActivity extends BaseAppCompatActivity implements
 
         setBottomSheetBehavior();
 
+       // ClickSubscription();
         param1 = flLandingPage.getLayoutParams();
         param1.height = (int) (height - getStatusBarHeight() - mActionBarHeight);
         Log.i(TAG, "onSlide: PAram Height : " + param1.height);
@@ -713,7 +714,14 @@ public class LandingPageActivity extends BaseAppCompatActivity implements
         addPermissionListener(permissionListener);
 
     }
+    public void onClickTest(View v){
 
+        //The MainActivity being the starting point
+        Intent intent = new Intent(LandingPageActivity.this,
+                SubscriptionActivity.class);
+        LandingPageActivity.this.startActivity(intent);
+
+    }
     public void setBottomSheetBehavior() {
 
         bottomSheetBehavior = BottomSheetBehavior.from(llLandingBottomBar);
@@ -763,6 +771,9 @@ public class LandingPageActivity extends BaseAppCompatActivity implements
         });
     }
 
+    public  void ClickSubscription(){
+
+    }
     private void initMap() {
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.fragment_home_map);

@@ -369,7 +369,14 @@ public class AutoBooking extends BaseAppCompatActivity implements
             }
         }
     }
+    public void onClickTest(View v){
 
+        //The MainActivity being the starting point
+        Intent intent = new Intent(AutoBooking.this,
+                SubscriptionActivity.class);
+        AutoBooking.this.startActivity(intent);
+
+    }
     private boolean checkPlayServices() {
 
         GoogleApiAvailability googleApiAvailability = GoogleApiAvailability.getInstance();
