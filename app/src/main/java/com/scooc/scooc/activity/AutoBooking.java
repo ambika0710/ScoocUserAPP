@@ -28,6 +28,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -230,7 +231,8 @@ public class AutoBooking extends BaseAppCompatActivity implements
     int REQUEST_CODE_PENDING_INTENT = 0;
 
     int day, month, year;
-
+    public CheckBox checkBox_saturday;
+    public CheckBox checkBox_sunday;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -299,6 +301,8 @@ public class AutoBooking extends BaseAppCompatActivity implements
                         "    pickuptime varchar(200) NOT NULL,\n" +
                         "    startdate varchar(200) NOT NULL,\n" +
                         "    enddate varchar(200) NOT NULL,\n" +
+                        "    excludesaturday varchar(200) NOT NULL,\n" +
+                        "    excludesunday varchar(200) NOT NULL,\n" +
                         "    mulintent varchar(200) NOT NULL\n" +
                         ");"
         );
@@ -545,6 +549,9 @@ public class AutoBooking extends BaseAppCompatActivity implements
         String picktime = chooseTime.getText().toString();
         String startdat = mdob_et.getText().toString();
         String enddat = enddate.getText().toString();
+        String excludeSaturday = checkBox_saturday.getText().toString();
+        String excludeSunday = checkBox_sunday.getText().toString();
+
         String mulint = Integer.toString(multipe_intent);
 
 
@@ -553,14 +560,14 @@ public class AutoBooking extends BaseAppCompatActivity implements
         //validating the inptus
 
         String insertSQL = "INSERT INTO autobookingtable \n" +
-                "(source, destination, pickuptime, startdate,enddate,mulintent)\n" +
+                "(source, destination, pickuptime, startdate, enddate, excludesaturday, excludesunday, mulintent)\n" +
                 "VALUES \n" +
-                "(?, ?, ?, ?,?,?);";
+                "(?, ?, ?, ?,?,?, ?, ?);";
 
         //using the same method execsql for inserting values
         //this time it has two parameters
         //first is the sql string and second is the parameters that is to be binded with the query
-        mDatabase.execSQL(insertSQL, new String[]{source, des, picktime, startdat,enddat,mulint});
+        mDatabase.execSQL(insertSQL, new String[]{source, des, picktime, startdat,enddat, excludeSaturday, excludeSunday, mulint});
         sample();
         Toast.makeText(this, "Auto Booking Added Successfully", Toast.LENGTH_SHORT).show();
 
@@ -826,6 +833,8 @@ public class AutoBooking extends BaseAppCompatActivity implements
         txtCarThree = (TextView) findViewById(R.id.txt_la_xl);
         carFour = (TextView) findViewById(R.id.txt_la_xll);
         mdob_et = findViewById(R.id.txt_startDate);
+        checkBox_saturday = findViewById(R.id.checkBox_Saturday);
+        checkBox_sunday = findViewById(R.id.checkBox_Sunday);
         enddate = findViewById(R.id.txt_destinationtest);
         add_ride = findViewById(R.id.add_ride);
 
