@@ -23,7 +23,7 @@ public class CarInfoInvoker extends BaseInvoker {
         WebConnector webConnector;
 
         webConnector = new WebConnector(new StringBuilder(ServiceNames.CAR_AVAILABILITY), WSConstants.PROTOCOL_HTTP, urlParams, null);
-
+        System.out.println(">>>>>>>>>>> request: " + urlParams);
         //webConnector= new WebConnector(new StringBuilder(ServiceNames.MODELS), WSConstants.PROTOCOL_HTTP, null);
 //    String wsResponseString=webConnector.connectToPOST_service();
         String wsResponseString = webConnector.connectToGET_service(true);
